@@ -1,0 +1,30 @@
+ /* navbar */
+  
+.footer-bar {
+    background-color: var(--primary);
+    box-shadow: 1px 1px 4px 0 var(--primary-opaque        );
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 3;
+    height: 48px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.footer-bar > a {
+    color: var(--light);
+    text-decoration: none;
+    padding: 0px 15px;
+    font-size: 1em;
+}
+
+.footer-bar > a:hover {
+    cursor: pointer;
+    text-decoration: underline!important;
+}

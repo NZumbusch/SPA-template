@@ -1,0 +1,55 @@
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+) !default;
+
+$container-min-widths: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+) !default;
+
+$container-padding-x: 0.75rem !default;
+
+@mixin make-container($gutter: $container-padding-x) {
+  width: 100%;
+  padding-right: $gutter;
+  padding-left: $gutter;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container,
+.container-fluid {
+  @include make-container();
+}
+
+// Split into two loops because of smaller purgecss output
+@each $name, $max-width in $container-max-widths {
+  .container-#{$name} {
+    @include make-container();
+  }
+}
+
+@each $name, $max-width in $container-max-widths {
+  $min-width: map-get($container-min-widths, $name);
+  
+  @media (min-width: $min-width) {
+    @each $breakpoint, $value in $container-max-widths {
+      @if $value < $min-width {
+        .container-#{$breakpoint} {
+          max-width: $max-width;
+        }
+      }
+    }
+
+    .container {
+      max-width: $max-width;
+    }
+  }
+}

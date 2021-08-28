@@ -1,0 +1,58 @@
+.simpleCheckbox + label {
+    display: block;
+    cursor: pointer;
+    
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    > p {
+        font-size: 1em;
+        top: 0px;
+        margin: 0px;
+    }
+}
+
+.simpleCheckbox {
+    display: none;
+}
+
+.simpleCheckbox + label:after {
+    content: "";
+    border: 0.1em solid #000;
+    border-radius: 0.2em;
+    display: inline-block;
+    width: 1.1em;
+    height: 1.1em;
+    font-size: 1em;
+
+    margin: 0px;
+
+    vertical-align: bottom;
+    color: transparent;
+    transition: 0.2s;
+}
+
+.simpleCheckbox + label:active:after {
+    transform: scale(0);
+}
+
+.simpleCheckbox:checked + label:after {
+    background-color: var(--teal);
+    border-color: var(--teal);
+    color: #fff;
+}
+
+.simpleCheckbox:disabled + label:after {
+    transform: scale(1);
+    border-color: #aaa;
+}
+
+.simpleCheckbox:checked:disabled + label:after {
+    transform: scale(1);
+    background-color: #bfb;
+    border-color: #bfb;
+}

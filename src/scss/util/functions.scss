@@ -1,0 +1,13 @@
+@use 'sass:math';
+
+@function rem($pixels, $context: 16) {
+    @return math.div($pixels, $context) * 1rem;
+}
+
+@function is-map($var){
+    @return type-of($var) == map;
+}
+
+@function is-list($var){
+    @return type-of($var) == list;
+}

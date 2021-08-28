@@ -1,0 +1,90 @@
+@use 'functions';
+
+$spacer: 1rem;
+$spacers: (
+    0: 0,
+    1: $spacer * 0.25,
+    2: $spacer * 0.5,
+    3: $spacer,
+    4: $spacer * 1.5,
+    5: $spacer * 3,
+    auto: auto
+);
+
+$spacetypes: (
+    "margin": (
+        properties: margin,
+        class: m
+    ),
+    "margin-x": (
+        properties: (margin-right, margin-left),
+        class: mx
+    ),
+    "margin-y": (
+        properties: (margin-top, margin-bottom),
+        class: my
+    ),
+    "margin-top": (
+        properties: margin-top,
+        class: mt
+    ),
+    "margin-bottom": (
+        properties: margin-bottom,
+        class: mb
+    ),
+    "margin-start": (
+        properties: margin-left,
+        class: ms
+    ),
+    "margin-end": (
+        properties: margin-right,
+        class: me
+    ),
+    "padding": (
+        properties: padding,
+        class: p
+    ),
+    "padding-x": (
+        properties: (padding-right, padding-left),
+        class: px
+    ),
+    "padding-y": (
+        properties: (padding-top, padding-bottom),
+        class: py
+    ),
+    "padding-top": (
+        properties: padding-top,
+        class: pt
+    ),
+    "padding-bottom": (
+        properties: padding-bottom,
+        class: pb
+    ),
+    "padding-start": (
+        properties: padding-left,
+        class: ps
+    ),
+    "padding-end": (
+        properties: padding-right,
+        class: pe
+    )
+);
+
+@each $key, $space in $spacers {
+    @each $i, $type in $spacetypes {
+        $class: map-get($type, class);
+        $properties: map-get($type, properties);
+
+        @if is-list($properties) {
+            .#{$class}-#{$key} {
+                @each $property in $properties {
+                    #{$property}: #{$space} !important;
+                }
+            }
+        } @else {
+            .#{$class}-#{$key} {
+                #{$properties}: #{$space} !important;
+            }
+        }
+    }
+}

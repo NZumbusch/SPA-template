@@ -1,0 +1,94 @@
+.card {
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
+    background-color:white;
+    border-radius: .3rem;
+
+    &-body {
+        padding: 24px;
+        position: relative;
+    }
+
+    &-title {
+        font-size: 1.8em;
+        color: var(--dark);
+        font-weight: 500;
+        margin-top: -10px;
+        margin-bottom: 10px;
+    }
+
+    &-text {
+        font-size: 1.05em;
+        color: var(--dark);
+        font-weight: 500;
+    }
+
+    &-copyright {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        border-top: 1px solid rgba(160,160,160,0.2);
+      }
+      
+    &-copyright > a {
+        font-size: 1em;
+        width: auto;
+        text-align: center;
+        color: rgba(160,160,160,0.9);
+    }
+}
+
+.card a {
+    text-decoration: none;
+    color: var(--link-font-color)
+}
+
+
+
+// .c-container {
+//     max-width: 1020px;
+//     width: 80%;
+//     margin-right: auto;
+//     margin-left: auto;
+//     background-color: var(--light);
+//     margin-top: 60px;
+//     padding: 10px;
+//     min-height: 40%;
+//     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+//     position: relative;
+//   }
+  
+//   .c-container-heading {
+//     font-size: 1.8em;
+//     text-align: center;
+//     color: var(--dark);
+//     font-weight: normal;
+//     margin-top: 10px;
+//   }
+  
+//   .c-container-copyright {
+//     position: absolute;
+//     bottom: 0px;
+//     left: 0px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     right: 0px;
+//     height: 40px;
+//     border-top: 1px solid rgba(160, 160, 160, 0.2);
+//   }
+  
+//   .c-container-copyright > a {
+//     font-size: 1.1em;
+//     width: auto;
+//     text-align: center;
+//     color: rgba(160, 160, 160, 0.9);
+//   }
+  
+//   @media screen and (max-width: 700px) {
+//     .c-container {
+//       min-width: 100%;
+//       margin-top: 0px;
+//     }
+//   }

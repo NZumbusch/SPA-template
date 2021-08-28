@@ -1,0 +1,16 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body, input, textarea, button, select { // on top of button elements that normally take styling from browser control, see https://stackoverflow.com/questions/2874813/why-textarea-and-textfield-not-taking-font-family-and-font-size-from-body
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-main);
+}

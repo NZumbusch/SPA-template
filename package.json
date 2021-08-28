@@ -1,0 +1,36 @@
+{
+  "name": "spa-template",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "autoprefixer": "^10.3.1",
+    "bootstrap-icons": "^1.5.0",
+    "browser-sync": "^2.27.4",
+    "cssnano": "^5.0.6",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-terser": "^2.0.1",
+    "postcss": "^8.3.5",
+    "sass": "^1.35.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "gulp-live-server": "0.0.31"
+  }
+}
