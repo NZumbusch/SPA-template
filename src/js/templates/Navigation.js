@@ -15,7 +15,7 @@ main.templates["Navigation"] = () =>{
 
         <div class="navbar-sidebar-container">
             <div class="navbar-sidebar">
-                <img class="navbar-sidebar-logo" src="/client/assets/img/logo.png">
+                <img class="navbar-sidebar-logo" src="">
                 <h1 class="navbar-sidebar-heading"><span onclick="window.location.hash='';">SPA-Template</span></h1>
                 <ul class="navbar-sidebar-list">
                     <li class="navbar-sidebar-list-link"><a class="navbar-sidebar-list-link-element" href="#login" data-link onclick="hide_navbar();"><i class="bi bi-bell navbar-sidebar-list-link-element-icon"></i>Login</a></li>
